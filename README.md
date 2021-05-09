@@ -110,7 +110,7 @@ Choose a branch name that is concince and descriptive.
 
 ## Anti-Patterns
 
-### Don't develop a feature in `develop`. `staging` or `master` :x:
+### Don't develop a feature in `develop`, `staging` or `master` :x:
 
 **Instead**: Create a feature branch off of `master`. When the feature is developed and tested, create a pull request. :heavy_check_mark:
 
