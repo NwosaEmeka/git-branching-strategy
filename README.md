@@ -20,12 +20,12 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
 
 ## Branches Overview
 
-| Branch   | Base Branch | Description                                                                                                      |
-| :------- | :---------- | :--------------------------------------------------------------------------------------------------------------- |
-| `master` | N/A         | What is live in production (**stable**).<br/>A pull request is required to merge code into `master`.             |
-| staging  | `master`    | Cutting-edge features (**unstable**). These branches are used for any maintenance features / active development. |
-| `dev`    | `master`    | The latest state of development (**unstable**).<br>Deployed to the development environment.                      |
-| feature  | `master`    | Cutting-edge features (**unstable**). These branches are used for any maintenance features / active development. |
+| Branch   | Base Branch | Description                                                                                                       |
+| :------- | :---------- | :---------------------------------------------------------------------------------------------------------------- |
+| `master` | N/A         | What is live in production (**stable**).<br/>A pull request is required to merge code into `master`.              |
+| staging  | `master`    | The latest state of staging (**unstable**).<br>Codes in this branch are deployed to staging environment.          |
+| `dev`    | `master`    | The latest state of development (**unstable**).<br>Deployed to the development environment.                       |
+| feature  | `master`    | Cutting-edge features (**unstable**).<br>These branches are used for any maintenance features active development. |
 
 - Develop new feature
 
