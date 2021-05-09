@@ -1,4 +1,4 @@
-# UMAI FRONTEND GIT BRANCHING STRATEGY
+# Umai Frontend Git Branching Strategy
 
 This document provides a brief overview of the git branching strategy used by UMAI frontend team. The UMAI Frontend team uses continuous deployment strategy where features are deployed as soon they are ready.
 
@@ -31,11 +31,11 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
 
 1. Create a feature branch based off of `master`.
 
-```
-  $ git checkout master
-  $ git checkout -b feature/UP-1234-git-branching-strategy
-  $ git push --set-upstream feature/UP-1234-git-branching-strategy
-```
+   ```
+     $ git checkout master
+     $ git checkout -b feature/UP-1234-git-branching-strategy
+     $ git push --set-upstream feature/UP-1234-git-branching-strategy
+   ```
 
 :bulb: Make sure your master branch is up-to-date.
 
@@ -52,10 +52,12 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
    When making a new commit just run `git commit` and you'll be prompted for the
    required fields.
 
-   DO:
+   **DO:**
+
    `$ git commit` :heavy_check_mark:
 
-   DON'T:
+   **DON'T:**
+
    `$ git commit -m 'commit message'` :x:
 
    :warning: Use only numbers when prompted to enter the ticket number
@@ -70,11 +72,11 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
    - Base: `develop`
    - Compare: `feature/UP-1234-git-branching-strategy`
 
-   DO:
+   **DO:**
 
    - Test the application locally before merging to develop branch :heavy_check_mark:
 
-   DON'T:
+   **DON'T:**
 
    - Merge into master branch without pull request review and approval :x:
 
@@ -92,4 +94,28 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
 
 ## Branch naming convention
 
+With the exception of `master` , `staging` and `develop`, branch should be named in relation to the JIRA ticket starting with a prefix of feature or hotfix, the ticket key and short title.
+
+Branch names should use dashes to separate words of the name and should avoid any uppercase letters.
+
+Choose a branch name that is concince and descriptive.
+
+`feature/UP-1234-branch-naming-example`
+
 ## Anti-Patterns
+
+### Don't develop a feature in `develop` or `master` :x:
+
+**Instead**: Create a feature branch off of `master`. When the feature is developed and tested, create a pull request. :heavy_check_mark:
+
+**Why?**: All code changes require a code review and verification by our QA team. By opening a pull request, you signal to the rest of the team that your code is ready to be reviewed and tested.
+
+---
+
+### Don't merge your pull requests without at least +1 :x:
+
+**Instead**: Ask a team member for a code review and to at least +1 your changes. :heavy_check_mark:
+
+**Why?**: _Nobody is perfect._ Having said that, we always want to make sure at least one other team member reviews our code. Performance, readability, bugs, memory leaks, etc can all be impacted by code changes and sharing the responsibility to think about all that with a team member takes pressure off your shoulders.
+
+---
