@@ -39,7 +39,56 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
 
 :bulb: Make sure your master branch is up-to-date.
 
-2.
+2. Develop the code for the new feature and commit as you go. This will provide a safety net should your hard drive / workstation crash.
+
+   ```
+   $ ... make changes
+   $ git add -A .
+   $ git commit
+   $ git push
+   ```
+
+   :bulb: This repository makes use of [Commitizen](https://github.com/commitizen/cz-cli).
+   When making a new commit just run `git commit` and you'll be prompted for the
+   required fields.
+
+   DO:
+   `$ git commit` :heavy_check_mark:
+
+   DON'T:
+   `$ git commit -m 'commit message'` :x:
+
+   :warning: Use only numbers when prompted to enter the ticket number
+
+3. Navigate to the project on [Github](www.github.com) and open a pull request with the following branch settings:
+
+   - Base: `master`
+   - Compare: `feature/UP-1234-git-branching-strategy`
+
+4. While waiting for the pull request review and approval, merge the feature branch with the following settings:
+
+   - Base: `develop`
+   - Compare: `feature/UP-1234-git-branching-strategy`
+
+   DO:
+
+   - Test the application locally before merging to develop branch :heavy_check_mark:
+
+   DON'T:
+
+   - Merge into master branch without pull request review and approval :x:
+
+5. Deploy develop to development environment
+
+   ```
+   $ git checkout develop
+   $ git pull
+   $ npm run deploy:dev
+   ```
+
+6. If everything is good in development, merge the feature branch to staging and deploy to staging envrioment using `npm run deploy:staging`.
+
+7. If everything is good in staging environment, and the Pull request has been reviewed and approved, merge the feature branch to master and deploy to production environment using `npm run deploy:production`.
 
 ## Branch naming convention
 
