@@ -27,6 +27,8 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
 | `dev`    | `master`    | The latest state of development (**unstable**).<br>Deployed to the development environment.                       |
 | feature  | `master`    | Cutting-edge features (**unstable**).<br>These branches are used for any maintenance features active development. |
 
+---
+
 ## Develop new feature
 
 1. Create a feature branch based off of `master`.
@@ -92,6 +94,8 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
 
 7. If everything is good in staging environment, and the Pull request has been reviewed and approved, merge the feature branch to master and deploy to production environment using `npm run deploy:production`.
 
+---
+
 ## Branch naming convention
 
 With the exception of `master` , `staging` and `develop`, branch should be named in relation to the JIRA ticket starting with a prefix of feature or hotfix, the ticket key and short title.
@@ -102,9 +106,11 @@ Choose a branch name that is concince and descriptive.
 
 `feature/UP-1234-branch-naming-example`
 
+---
+
 ## Anti-Patterns
 
-### Don't develop a feature in `develop` or `master` :x:
+### Don't develop a feature in `develop`. `staging` or `master` :x:
 
 **Instead**: Create a feature branch off of `master`. When the feature is developed and tested, create a pull request. :heavy_check_mark:
 
@@ -119,3 +125,5 @@ Choose a branch name that is concince and descriptive.
 **Why?**: _Nobody is perfect._ Having said that, we always want to make sure at least one other team member reviews our code. Performance, readability, bugs, memory leaks, etc can all be impacted by code changes and sharing the responsibility to think about all that with a team member takes pressure off your shoulders.
 
 ---
+
+**Keep calm and happy codding** :rocket: :rocket: :rocket:
