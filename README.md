@@ -27,8 +27,20 @@ In UMAI, we use the Development, Staging, and Production (DSP) enviroment model 
 | `dev`    | `master`    | The latest state of development (**unstable**).<br>Deployed to the development environment.                       |
 | feature  | `master`    | Cutting-edge features (**unstable**).<br>These branches are used for any maintenance features active development. |
 
-- Develop new feature
+## Develop new feature
 
-- Branch naming convention
+1. Create a feature branch based off of `master`.
 
-- Anti-Patterns
+```
+  $ git checkout master
+  $ git checkout -b feature/UP-1234-git-branching-strategy
+  $ git push --set-upstream feature/UP-1234-git-branching-strategy
+```
+
+:bulb: Make sure your master branch is up-to-date.
+
+2.
+
+## Branch naming convention
+
+## Anti-Patterns
